@@ -13,7 +13,8 @@ export class Feedback extends Component {
 
   HendleTakeFeedback = e => {
     // const { name } = e.target;
-    this.setState(prev => ({ [e.target.name]: prev[e.target.name] + 1 }));
+    // this.setState(prev => ({ [e.target.name]: prev[e.target.name] + 1 }));
+    this.setState({ [e.target.name]: this.state[e.target.name] + 1 });
   };
 
   countTotalFeedback = () => {
