@@ -4,6 +4,8 @@ import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 
+const options = ['Good', 'Neutral', 'Bad'];
+
 export class Feedback extends Component {
   state = {
     good: 0,
@@ -33,7 +35,10 @@ export class Feedback extends Component {
       <section className="feedBackBox">
         <Sections title={'Please leave feedback'}>
           {/* <FeedbackOptions options={} > */}
-          <FeedbackOptions onLeaveFeedback={this.HendleTakeFeedback} />
+          <FeedbackOptions
+            options={options}
+            onLeaveFeedback={this.HendleTakeFeedback}
+          />
         </Sections>
         <Sections title={'Statistics'}>
           {this.countTotalFeedback() ? (
