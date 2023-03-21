@@ -34,7 +34,6 @@ export class Feedback extends Component {
     return (
       <section className="feedBackBox">
         <Sections title={'Please leave feedback'}>
-          {/* <FeedbackOptions options={} > */}
           <FeedbackOptions
             options={options}
             onLeaveFeedback={this.HendleTakeFeedback}
